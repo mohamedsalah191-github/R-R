@@ -89,7 +89,7 @@
   
 
  <!-- contact section -->
- <section class="contact_section bg-body pt-5 layout_padding-bottom">
+ <section class="contact_section bg-light py-5 layout_padding-bottom">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -99,7 +99,7 @@
       <div class="row">
         <div class="col-md-8 col-lg-6 mx-auto">
           <div class="form_container">
-            <form action="">
+            <form id="contactForm" action="">
               <div>
                 <input type="text" id="name" placeholder="Your Name" required />
               </div>
@@ -112,8 +112,8 @@
               <div>
                 <input type="text" id="message" class="message-box" placeholder="Message" required />
               </div>
-              <div class="btn_box ">
-                <button onclick="sendMail()" type="submit">
+              <div class="btn_box">
+                <button id="submitBtn" type="submit" disabled>
                   SEND
                 </button>
               </div>
