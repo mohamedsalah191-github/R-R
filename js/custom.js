@@ -94,6 +94,10 @@ let button = document.getElementById('submitBtn');
 button.addEventListener('click', (e)=>{
     e.preventDefault();
     sendMail();
+        document.getElementById('name').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('phone').value = "";
+        document.getElementById('message').value = ""; 
 })
 
 function sendMail(){
@@ -101,10 +105,7 @@ function sendMail(){
         name : document.getElementById('name').value,
         email : document.getElementById('email').value,
         phone : document.getElementById('phone').value,
-        message : document.getElementById('message').value,
-
-
-        
+        message : document.getElementById('message').value, 
     }
     console.log()
 
