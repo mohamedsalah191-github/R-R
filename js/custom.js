@@ -90,31 +90,80 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 //   send mail
 
+let button = document.getElementById('ahmed');
+button.addEventListener('click', (e)=>{
+    e.preventDefault();
+    sendMail();
+})
+
 function sendMail(){
     let parms = {
-        name : document.getElementById('name').value,
+        name : document.getElementById('from_name').value,
         email : document.getElementById('email').value,
         phone : document.getElementById('phone').value,
         message : document.getElementById('message').value,
 
-    }
 
-    emailjs.send("service_93jxxr9","template_uklx9aw",parms).then(alert('Email Sent!'))
+        
+    }
+    console.log()
+
+    emailjs.send("service_93jxxr9","template_uklx9aw",parms).then(alert('Message Sent!'))
+    
 }
 
 
 
 
-// var templateParams = {
-//     name: 'James',
-//     notes: 'Check this out!',
-//   };
-  
-//   emailjs.send('service_93jxxr9', 'template_uklx9aw', templateParams).then(
-//     (response) => {
-//       console.log('SUCCESS!', response.status, response.text);
-//     },
-//     (error) => {
-//       console.log('FAILED...', error);
-//     },
-//   );
+
+
+// const form = document.getElementById('contactForm');
+// const submitBtn = document.getElementById('submitBtn');
+// const requiredFields = ['name', 'email', 'phone', 'message'];
+
+// form.addEventListener('input', function() {
+//   let allFilled = requiredFields.every(id => document.getElementById(id).value.trim() !== '');
+//   submitBtn.disabled = !allFilled;
+// });
+
+// form.addEventListener('submit', function(event) {
+//   event.preventDefault();
+
+//   const name = document.getElementById('name').value.trim();
+//   const email = document.getElementById('email').value.trim();
+//   const phone = document.getElementById('phone').value.trim();
+//   const message = document.getElementById('message').value.trim();
+
+//   if (!name || !email || !phone || !message) {
+//     alert('All fields are required.');
+//     return;
+//   }
+
+//   if (!validateEmail(email)) {
+//     alert('Please enter a valid email address.');
+//     return;
+//   }
+
+//   if (!validatePhone(phone)) {
+//     alert('Please enter a valid phone number.');
+//     return;
+//   }
+
+//   // If all validations pass, proceed with form submission
+//   sendMail();
+// });
+
+// function validateEmail(email) {
+//   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   return re.test(email);
+// }
+
+// function validatePhone(phone) {
+//   const re = /^[0-9]{10,15}$/;
+//   return re.test(phone);
+// }
+
+// function sendMail() {
+//   // Your email sending logic here
+//   alert('Mail sent successfully!');
+// }
