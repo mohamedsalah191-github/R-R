@@ -11,7 +11,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/logo.png" type="">
+  <link rel="shortcut icon" href="images/logo.jpg" type="">
 
   <title> R & R </title>
 
@@ -33,6 +33,8 @@
 <!--  -->
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
+
+  <!-- sendmail -->
   <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -44,6 +46,7 @@
    })();
 </script>
   
+  <!-- sendmail -->
 </head>
 
 <body>
@@ -80,9 +83,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="about.html"> About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="service.html">Services</a>
-              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services </a>
+                <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                    <a class="dropdown-item" href="#pills-home-tab">AI Diploma</a>
+                    <a class="dropdown-item" href="#pills-profile-tab">Data Visualization</a>
+                </div>
+            </li>
               <li class="nav-item">
                 <a class="nav-link" href="why.html">Why Us</a>
               </li>
@@ -160,7 +167,8 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <!-- Hide -->
+          <!-- <div class="carousel-item">
             <div class="container">
               <div class="row">
                 <div class="col-md-6">
@@ -191,12 +199,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <ol class="carousel-indicators">
           <li data-bs-target="#customCarousel1" data-bs-slide-to="0" class="active"></li>
           <li data-bs-target="#customCarousel1" data-bs-slide-to="1"></li>
-          <li data-bs-target="#customCarousel1" data-bs-slide-to="2"></li>
+          <!-- <li data-bs-target="#customCarousel1" data-bs-slide-to="2"></li> -->
         </ol>
       </div>
     </section>
@@ -205,7 +213,7 @@
 
   <!-- service section -->
 
-  <section id="content_slider" class="service_section layout_padding">
+  <section id="content_slider" class=" service_section layout_padding">
     <div class="service_container">
       <div class="container">
         <div class="heading_container heading_center">
@@ -213,12 +221,12 @@
             Our <span>Services</span>
           </h2>
 
-          <ul id="content_slider" class=" nav  nav-pills mt-3" id="pills-tab" role="tablist">
-            <li class="nav-item mr-lg-3" role="presentation">
-              <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                type="button" role="tab" aria-controls="pills-home" aria-selected="true">AI Diploma</button>
+          <ul id="content_slider" class=" nav  nav-pills mt-3 tttb rounded-3" id="pills-tab" role="tablist">
+            <li class="nav-item mr-lg-3 ttt " role="presentation">
+              <button class="nav-link active fw-bolder " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="button" aria-controls="pills-home" aria-selected="true">AI Diploma</button>
             </li>
-            <li class="nav-item mr-lg-3" role="presentation">
+            <li class="nav-item mr-lg-3 fw-bolder ttt" role="presentation">
               <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
                 type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Data Visualization</button>
             </li>
@@ -234,19 +242,180 @@
               <div class="row">
                 <!-- Card 1 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                  <div class="card h-100">
-                    <img src="./image/Python.jpg" class="card-img-top" alt="Python Programming">
-                    <div class="card-body">
-                      <h5 class="card-title">Python</h5>
-                      <p class="card-text">Introduction to programming <br /> Data Types & Variables <br />
-                        Conditions<br /> Loops<br /> Data Structure ( List, Set, Tuple, Dictionary)<br /><br /><br />
-                      </p>
+                  <div class="card h-100 ">
+                    <a href="page1.html"><img src="./image/Python.webp" class="card-img-top" alt="Python Programming"></a>
+                    
+                    <div class="card-body ">
+                      <h5 class="card-title">Python </h5>
+                      <span>(25 hours)</span>
+                      <div id="content" class="card-text text-start" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+                        Introduction to programming <br />
+                        Data Types & Variables <br />
+                        Conditions<br />
+                        Loops<br />
+                        Data Structure (List, Set, Tuple, Dictionary)<br /><br /><br />
+                      </div>
                     </div>
-                    <div class="card-footer">
-                      <a href="page1.html" class="btn btn-primary">See More</a>
+                    <div class="card-footer ">
+                      <button id="toggleButton" class="btn btn-primary" onclick="toggleContent()">See More</button>
                     </div>
                   </div>
                 </div>
+                <!-- Card 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card h-100 ">
+                    <a href="page1.html"> <img src="./image/linear algebra.webp" class="card-img-top" alt="Python Programming"> </a>
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Linear Algebra  </h5>
+                      <span>(9 hours)</span>
+                      <div id="content2" class="card-text" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+                        <p class="card-text">Span<br /> Linear Dependency<br /> Linear System<br /> PCA<br />
+                          EigenDecomposition </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button id="toggleButton2" class="btn btn-primary" onclick="toggleContent2()">See More</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <a href="page1.html"> <img src="./image/Probability & Statistics.webp" class="card-img-top" alt="Python Programming"></a>
+                   
+                    <div class="card-body ">
+                      <h5 class="card-title">Probability & Statistics</h5>
+                      <span>(9 hours)</span>
+                      <div id="content3" class="card-text" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+                      <p class="card-text">Mean, Mode, Median<br /> CLT(Central Limit Theorem)<br /> Normal
+                        Distribution<br /> Expected Values<br /> P-Value<br /> Z-Score </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button id="toggleButton3" class="btn btn-primary" onclick="toggleContent3()">See More</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <a href="page1.html"> <img src="./image/numerical optimization.webp" class="card-img-top" alt="Python Programming"></a>
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Numerical Optimization</h5>
+                      <span>(12 hours)</span>
+                      <div id="content4" class="card-text" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+                        <p class="card-text">Newton Method<br /> Gradient Descent<br /> Stochastic Gradient Descent<br />
+                          Momentum Gradient Descent <br /> AdaGrad<br /> Nestrov<br /> Adam </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button id="toggleButton4" class="btn btn-primary" onclick="toggleContent4()">See More</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <a href="page1.html"><img src="./image/Intermediate Python.webp" class="card-img-top" alt="Python Programming"></a>
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Intermediate Python</h5>
+                      <span>(12 hours)</span>
+                      <div id="content5" class="card-text" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+                        <p class="card-text">Numpy <br /> Pandas<br /> Matplotlib<br /> Seaborn<br /> </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button id="toggleButton5" class="btn btn-primary" onclick="toggleContent5()">See More</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <a href="page1.html"><img src="./image/Data Visualization.webp" class="card-img-top" alt="Python Programming"></a>
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Data Visualization</h5>
+                      <span>(15 hours)</span>
+                      <div id="content6" class="card-text" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+                        <p class="card-text">Plotly<br /> Barplot<br /> Barchart<br /> Histogram<br /> PieChart </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button id="toggleButton6" class="btn btn-primary" onclick="toggleContent6()">See More</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <a href="page1.html"><img src="./image/Machine Learning one.webp" class="card-img-top" alt="Python Programming"></a>
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Machine Learning one 
+                      </h5>
+                      <span>(20 hours)</span>
+                      <div id="content7" class="card-text" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+                        <p class="card-text">Linear Regression <br /> Logistic Regression<br /> KNN<br /> SVM<br />
+                          Decision Tree <br /> Random Forest </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button id="toggleButton7" class="btn btn-primary" onclick="toggleContent7()">See More</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <a href="page1.html"> <img src="./image/Machine Learning two.webp" class="card-img-top" alt="Python Programming"></a>
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Machine Learning two</h5>
+                      <span>(20 hours)</span>
+                      <div id="content8" class="card-text" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+                        <p class="card-text">Kmeans<br /> DBSCAN<br /> GMM </p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button id="toggleButton8" class="btn btn-primary" onclick="toggleContent8()">See More</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 9 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card h-100">
+                    <a href="page1.html"> <a href="page1.html"><img  src="./image/Deep Learning.webp" class="card-img-top" alt="Python Programming"></a>  </a>
+                 
+                    <div class="card-body">
+                      <h5 class="card-title">Deep Learning</h5>
+                      <span>(15 hours)</span>
+                      <div id="content9" class="card-text" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out;">
+                        <p class="card-text">ANN<br /> CNN<br /> RNN<br /> LSTM<br /> AUTOENCODER<br /> TRANSFORMERS</p>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <button id="toggleButton9" class="btn btn-primary" onclick="toggleContent9()">See More</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade py-5" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+              tabindex="0">Soon!</div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+              tabindex="0">Soon!</div>
+          </div>
+        </div>
+      </div>
+  </section> 
+<!--                 
+
+olllllldddd carrrddds
+
                 <div class="col-lg-3 col-md-6 mb-4">
                   <div class="card h-100">
                     <img src="./image/Linear Algebra.jpg" class="card-img-top" alt="Linear Algebra Essentials">
@@ -357,7 +526,7 @@
           </div>
         </div>
       </div>
-  </section>
+  </section> -->
 
   <!-- end service section -->
 
@@ -799,13 +968,13 @@
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +20 106 570 9273
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  A.mohsen@gmail.com
+                  abdomohsen316@gmail.com
                 </span>
               </a>
             </div>

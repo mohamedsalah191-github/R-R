@@ -168,3 +168,120 @@ function validatePhone(phone) {
 //   // Your email sending logic here
 //   alert('Mail sent successfully!');
 // }
+// Cards start 
+function toggleContent() {
+  var content = document.getElementById("content");
+  var button = document.getElementById("toggleButton");
+
+  if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+    content.style.maxHeight = content.scrollHeight + "px";
+    button.textContent = "See Less";
+  } else {
+    content.style.maxHeight = "0px";
+    button.textContent = "See More";
+  }
+}
+// card2
+function toggleContent2() {
+    var content = document.getElementById("content2");
+    var button = document.getElementById("toggleButton2");
+  
+    if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.textContent = "See Less";
+    } else {
+      content.style.maxHeight = "0px";
+      button.textContent = "See More";
+    }
+  }
+// card3
+function toggleContent3() {
+    var content = document.getElementById("content3");
+    var button = document.getElementById("toggleButton3");
+  
+    if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.textContent = "See Less";
+    } else {
+      content.style.maxHeight = "0px";
+      button.textContent = "See More";
+    }
+  }
+// card4
+function toggleContent4() {
+    var content = document.getElementById("content4");
+    var button = document.getElementById("toggleButton4");
+  
+    if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.textContent = "See Less";
+    } else {
+      content.style.maxHeight = "0px";
+      button.textContent = "See More";
+    }
+  }
+// card5
+function toggleContent5() {
+    var content = document.getElementById("content5");
+    var button = document.getElementById("toggleButton5");
+  
+    if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.textContent = "See Less";
+    } else {
+      content.style.maxHeight = "0px";
+      button.textContent = "See More";
+    }
+  }
+// card6
+function toggleContent6() {
+    var content = document.getElementById("content6");
+    var button = document.getElementById("toggleButton6");
+  
+    if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.textContent = "See Less";
+    } else {
+      content.style.maxHeight = "0px";
+      button.textContent = "See More";
+    }
+  }
+// card7
+function toggleContent7() {
+    var content = document.getElementById("content7");
+    var button = document.getElementById("toggleButton7");
+  
+    if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.textContent = "See Less";
+    } else {
+      content.style.maxHeight = "0px";
+      button.textContent = "See More";
+    }
+  }
+// card8
+function toggleContent8() {
+    var content = document.getElementById("content8");
+    var button = document.getElementById("toggleButton8");
+  
+    if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.textContent = "See Less";
+    } else {
+      content.style.maxHeight = "0px";
+      button.textContent = "See More";
+    }
+  }
+// card9
+function toggleContent9() {
+    var content = document.getElementById("content9");
+    var button = document.getElementById("toggleButton9");
+  
+    if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
+      content.style.maxHeight = content.scrollHeight + "px";
+      button.textContent = "See Less";
+    } else {
+      content.style.maxHeight = "0px";
+      button.textContent = "See More";
+    }
+  }

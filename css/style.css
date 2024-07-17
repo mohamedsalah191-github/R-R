@@ -223,6 +223,36 @@ background-color: #007bff ;
   font-size: 24px;
   color: #ffffff;
 }
+/* إضافة التنسيقات للناف بار والقائمة المنسدلة */
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.navbar-nav .dropdown-item {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #575757;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-toggle .arrow {
+  margin-left: 5px;
+}
+
 
 .custom_nav-container {
   padding: 0;
@@ -1072,3 +1102,31 @@ background-color: #007bff ;
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+.ttt {
+color: #000000;
+font-family: "Open Sans", sans-serif;
+font-size: 1.5rem;
+font-style: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-weight: 700;
+
+}
+
+
+
+.list li {
+  list-style: inside;
+}
+
+
+/* card */
+#content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
